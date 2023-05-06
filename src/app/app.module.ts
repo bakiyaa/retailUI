@@ -8,8 +8,12 @@ import { Routes,RouterModule } from '@angular/router';
 import { ProductCategoryMenuComponent } from './component/product-category-menu/product-category-menu.component';
 import { SearchComponent } from './component/search/search.component';
 import { ProductDeatilsComponent } from './component/product-deatils/product-deatils.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CardStatusComponent } from './component/cart-status/cart-status.component';
+import { CartDeatilsComponent } from './component/cart-deatils/cart-deatils.component';
 
 const routes: Routes = [
+  {path: 'cart-details', component: CartDeatilsComponent},
  {path: 'products/:id', component: ProductDeatilsComponent},
   {path:'search/:keyword',component: ProductListComponent},
   {path: 'category/:id', component: ProductListComponent},
@@ -25,12 +29,15 @@ const routes: Routes = [
     ProductListComponent,
     ProductCategoryMenuComponent,
     SearchComponent,
-    ProductDeatilsComponent
+    ProductDeatilsComponent,
+    CardStatusComponent,
+    CartDeatilsComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
