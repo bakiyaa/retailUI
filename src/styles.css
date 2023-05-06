@@ -722,8 +722,16 @@ table.table.table-bordered th{
     color:#0da8e4
 }
 .detail-section{
+    max-width: 100%;
+    height: auto;
     margin-top:60px
 }
+
+
+   
+.detail-img{
+        width: 30%;
+    }
 /**/
 
 /* 

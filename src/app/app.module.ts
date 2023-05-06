@@ -7,8 +7,10 @@ import {ProductService} from '../app/service/product.service';
 import { Routes,RouterModule } from '@angular/router';
 import { ProductCategoryMenuComponent } from './component/product-category-menu/product-category-menu.component';
 import { SearchComponent } from './component/search/search.component';
+import { ProductDeatilsComponent } from './component/product-deatils/product-deatils.component';
 
 const routes: Routes = [
+ {path: 'products/:id', component: ProductDeatilsComponent},
   {path:'search/:keyword',component: ProductListComponent},
   {path: 'category/:id', component: ProductListComponent},
   {path: 'category', component: ProductListComponent},
@@ -22,7 +24,8 @@ const routes: Routes = [
     AppComponent,
     ProductListComponent,
     ProductCategoryMenuComponent,
-    SearchComponent
+    SearchComponent,
+    ProductDeatilsComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
